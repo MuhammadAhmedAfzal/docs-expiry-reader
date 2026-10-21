@@ -1,0 +1,17 @@
+{
+  "name": "docs-reader",
+  "version": "1.0.0",
+  "author": "Muhammad Ahmed Afzal",
+  "private": true,
+  "description": "Document expiry tracker: React client + Node/Express/MongoDB API",
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:memory": "concurrently -n api,web -c blue,green \"npm run dev:memory --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
